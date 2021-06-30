@@ -1,0 +1,32 @@
+.controls {
+    display: flex;
+    gap: 16px;
+    padding: 16px 64px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 128px);
+    height: fit-content;
+    background-color: rgba(255,255,255,.9);
+}
+.screen {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.color {
+    flex: 1;
+    height: 100%
+}
+
+.gradient {
+    display: flex;
+    width: 100%;
+    flex: 1
+}
+
+.slider {
+    flex: 1
+}
