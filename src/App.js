@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from './styles.module.css'
 import { SliderPicker } from 'react-color';
 
@@ -30,7 +30,7 @@ const mixColors = (color1 = '#ffffff', color2 = '#000000') => {
 
 function App() {
 
-  const [inputColors, setInputColors] = useState(['#ffffff', '#000000'])
+  const [inputColors, setInputColors] = useState(['#ff0033', '#0000ff'])
   const [steps, setSteps] = useState(5)
 
   const [gradient, setGradient] = useState(inputColors)
@@ -72,6 +72,8 @@ function App() {
     }
     setGradient(colorsArray)
   }
+
+  useEffect(()=>{generate()}, [])
 
   return <div className={styles.screen}>
     <div className={styles.controls}>
